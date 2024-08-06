@@ -1,0 +1,110 @@
+
+################################################################################
+# KRAKEN
+################################################################################
+
+# Information sur la façon de trade cette paire sur Kraken
+# Get tradable asset pairs
+# https://api.kraken.com/0/public/AssetPairs
+{
+  "error": [],
+  "result": {
+    "XXBTZUSD": {
+      "altname": "XBTUSD",
+      "wsname": "XBT/USD",
+      "aclass_base": "currency",
+      "base": "XXBT",
+      "aclass_quote": "currency",
+      "quote": "ZUSD",
+      "lot": "unit",
+      "cost_decimals": 5,
+      "pair_decimals": 1,
+      "lot_decimals": 8,
+      "lot_multiplier": 1,
+      "leverage_buy": [ 2, 3, 4, 5],
+      "leverage_sell": [2, 3, 4, 5],
+      "fees": [...],
+      "fees_maker": [...],
+      "fee_volume_currency": "ZUSD",
+      "margin_call": 80,
+      "margin_stop": 40,
+      "ordermin": "0.0001",
+      "costmin": "0.5",
+      "tick_size": "0.1",
+      "status": "online",
+      "long_position_limit": 300,
+      "short_position_limit": 240
+    },
+    .....
+  }
+}
+
+# Information sur une paire sur Kraken avec des options permettant de récupérer l'historique
+# Possiblité de retrouver ces données dans un fichier csv téléchargeable sur Kraken
+# GET OHLC information
+# https://api.kraken.com/0/public/OHLC
+{
+  "error": [],
+  "result": {
+    "XXBTZUSD": [
+      [
+        1688671200,   # int <time>
+        "30306.1",    # string <open>
+        "30306.2",    # string <high>
+        "30305.7",    # string <low>
+        "30305.7",    # string <close>
+        "30306.1",    # string <vwap>
+        "3.39243896", # string <volume>
+        23            # int <count>]
+      ],
+      .....
+    ]
+  }
+}
+
+# Information sur une paire sur Kraken avec des options permettant de récupérer la monnaie en temps presque réel
+# Get Ticker Information
+# https://api.kraken.com/0/public/Ticker
+
+
+
+
+
+################################################################################
+# BINANCE
+################################################################################
+
+# Fichier donnees_historiques.json
+# 60857 enregistrements
+# Entre le 17/08/2017 06:00:00 et 29/07/2024 17:59:59
+# Toutes les heures
+
+{
+    "system_info": {
+        "system": "Linux",
+        "release": "6.5.0-44-generic",
+        "version": "#44~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Jun 18 14:36:16 UTC 2"
+    },
+    "data": [
+        {
+            "open_time": 1502942400000,
+            "open": "4261.48000000",
+            "high": "4313.62000000",
+            "low": "4261.32000000",
+            "close": "4308.83000000",
+            "volume": "47.18100900",
+            "close_time": 1502945999999,
+            "quote_asset_volume": "202366.13839304",
+            "number_of_trades": 171,
+            "taker_buy_base_asset_volume": "35.16050300",
+            "taker_buy_quote_asset_volume": "150952.47794304"
+        },
+        ...
+    ]
+}
+
+
+
+# Define the endpoint and parameters for the API request
+# endpoint = 'https://api.binance.com/api/v3/ticker/24hr'  # Example endpoint for 24hr ticker price change statistics
+
